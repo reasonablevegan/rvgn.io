@@ -105,7 +105,7 @@ facebook_like: true
 # ----------------------- #
 
 prose:
-  rooturl: "source"
+  rooturl: "source/_posts"
   media: 'media'
   metadata:
     "source/_posts":
