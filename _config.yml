@@ -122,7 +122,7 @@ prose:
           value: "RVGN"          
       - name: "categories"
         field:
-          element: "multiselect"
+          element: "select"
           label: "Categories"
           value: "misc"
           options:
