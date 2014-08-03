@@ -111,6 +111,9 @@ prose:
         field:
           element: "hidden"
           value: "post"
+      - name: "date"
+        field:
+          element: "hidden"
       - name: "title"
         field:
           element: "text"
@@ -123,8 +126,18 @@ prose:
       - name: "categories"
         field:
           element: "select"
-          label: "Categories"
-          value: "misc"
+          label: "Category"
+          value: "science"
+          options:
+            - name: "Science"
+              value: "science"
+            - name: "Current affairs"
+              value: "current affairs"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "tags"
+          alterable: true
           options:
             - name: "Science"
               value: "science"
