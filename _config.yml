@@ -117,6 +117,10 @@ prose:
         field:
           element: "text"
           value: "Title"
+      - name: "author"
+        field:
+          element: "text"
+          value: "RVGN"
       - name: "comments"
         field:
           label: "Allow comments"
@@ -124,8 +128,13 @@ prose:
           value: true
       - name: "categories"
         field:
-          element: "text"
-          value: "misc"
+          label: "Category"
+          element: "select"
+          options:
+			  - name: 'Science'
+			    value: 'science'
+			  - name: 'Current affairs'
+			    value: 'current affairs'
       - name: "published"
         field:
           label: "Published"
