@@ -106,7 +106,7 @@ facebook_like: true
 
 prose:
   rooturl: "source"
-  media: "media"
+  media: 'media'
   metadata:
     "source/_posts":
       - name: "layout"
@@ -119,8 +119,9 @@ prose:
           value: "Title"
       - name: "author"
         field:
+          label: "author"
           element: "text"
-          value: "RVGN"
+          value: "RVGN"          
       - name: "comments"
         field:
           label: "Allow comments"
@@ -128,13 +129,8 @@ prose:
           value: true
       - name: "categories"
         field:
-          label: "Category"
-          element: "select"
-          options:
-			  - name: 'Science'
-			    value: 'science'
-			  - name: 'Current affairs'
-			    value: 'current affairs'
+          element: "text"
+          value: "misc"
       - name: "published"
         field:
           label: "Published"
