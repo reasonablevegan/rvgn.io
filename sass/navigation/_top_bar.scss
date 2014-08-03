@@ -1,0 +1,23 @@
+@import "compass/css3/box-shadow";
+
+$topbar-bg: #fff;
+$topbar-height: 45px;
+$topbar-link-font-size: 14px;
+$topbar-link-letterspacing: 0.5px;
+$topbar-link-hover-lightness: -10%;
+$topbar-link-bg-hover: #ccc;
+$topbar-link-color: #000;
+
+$topbar-title-weight: normal;
+$topbar-title-font-size: 15px;
+
+$topbar-dropdown-link-color: $primary-color;
+$topbar-dropdown-link-bg: white;
+
+.top-bar {
+	@include box-shadow(#a8a8a8 0px 1px 2px);
+
+	.name h1 a {
+		color: $secondary-color !important;
+	}
+}

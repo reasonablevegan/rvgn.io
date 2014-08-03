@@ -1,0 +1,26 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+<body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+	<nav role="navigation">{% include navigation.html %}</nav>
+	<div id="masthead">
+	  	<div class="row">
+	  		<div class="small-12 columns">
+	  			<a href="/">
+		  			<img src="{{ root_url }}/images/logo/rvgn.png"  title="RVGN" />
+		  			<span>Evidence-based compassion.<br />Some clever copy goes here. We think.</span>
+	  			</a>
+	  		</div>
+	  	</div>  	
+  	</div>
+	<div id="content" class="row">
+		<div class="columns small-12 large-9">
+			{{ content | expand_urls: root_url }}
+		</div>      
+		<div class="column large-3 hide-for-medium-down">
+			{% include custom/sidebar.html %}			
+		</div>
+	</div>    
+	<footer role="contentinfo">{% include footer.html %}</footer>
+	{% include after_footer.html %}
+</body>
+</html>

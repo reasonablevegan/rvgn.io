@@ -1,0 +1,22 @@
+aside#sidebar {
+
+	.disclaimer {
+		background-color: $light-grey;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		padding: 1em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+
+		p {
+			font-size: 0.75em;
+			color: #444;
+		}
+
+		a.button {
+			&:last-of-type {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+// grid properties
+$row-width: 1050px;
+$column-gutter: 40px;
+$total-columns: 12;
+
+// image display properties
+$boxed_images: false; 
+
+// colors
+$body-bg: #fff !default;
+$primary-color: #319483 !default; 
+$secondary-color: #eab14e !default;
+$light-grey: #efefef;
+
+// font colors
+$body-font-color: #333 !default; /* almost black by default */
+$header-font-color: $primary-color; /* magenta by default */
+$subheader-font-color: scale-color($body-font-color, $lightness: 35%); /* medium gray by default */ 
+$icon-color: #777777; /* medium-light gray by default */
+
+// body font properties
+$body-font-family: 'Lato', sans-serif !default;
+$body-font-size: 18px !default;
+$body-font-weight: 300 !default;
+$body-font-style: normal !default;
+$body-line-height: 1.45 !default;
+$body-paragraph-margin: 25px !default;
+$bold-font-weight: 500 !default;
+$button-font-tny: 14px;
+
+// header font properties
+$small-font-size: 50%;
+$header-font-family: 'Lato', sans-serif !default;
+$header-font-weight: 500;
+
+// link properties
+$anchor-text-decoration: none;
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($primary-color, $lightness: -25%);
+
+// border radii
+$global-radius: 0px !default;
+$global-rounded: 1000px !default;
+
