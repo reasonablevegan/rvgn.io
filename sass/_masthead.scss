@@ -1,36 +1,83 @@
 #masthead {
+
+	$mobile-height: 50px;
+	$full-height: 105px;
+
 	background-color: $light-grey;
 
 	.row {
-		height: 115px;
+		height: $mobile-height;
 		margin-bottom: 2em;
 
 		.columns {
-			position: relative;
-			text-align: center;
-	 	    top: 50%;
-		 	transform: translateY(-50%);
 
 		 	a {
 				color: #333;
+				display: table;
+			    height: $mobile-height;
+			    text-align: center;
+			    width: 100%;
+
+			    span {
+			    	&.tagline {
+			    		display: none;
+			    	}
+			    }
 			}
 
-			span {
-				display: none;
-			}
+			span {				
+				display: inline-block;
+			    height: $mobile-height;
+			    line-height: $mobile-height;
+			    vertical-align: middle;
 
-			@media #{$medium-up} { 
-				text-align: left;
+			    &.title {
+			    	font-size: 1.5em; 
+			    	margin-right: 0.5em;
+			    }
+
+			    &.icon {
+			    	display: none;
+			    	font-size: 5em;
+			    	margin-right: 0.15em;
+			    }
+
+			    &.tagline {
+			    	display: none;
+				    line-height: 1.2em;
+				    text-align: left;
+			    }
+			}
+		}
+	}
+
+	@media #{$medium-up} { 
+
+		.row {
+			height: $full-height;
+
+			.columns {
+
+				a {
+					text-align: left;
+					width: auto;
+					height: $full-height;
+				}
 
 				span {
-					display: inline-block;
-					font-size: 16px;
-					line-height: 20px;
-					position: relative;
-					top: 10px;
-					margin-left: 1em;
+
+					height: $full-height;
+					line-height: $full-height;
+
+					&.tagline {
+			    		display: table-cell !important;
+			    	}
+
+			    	&.icon {
+			    		display: inline-block;
+				    }
 				}
 			}
 		}
-	}	
+	}
 }
