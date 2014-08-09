@@ -1,3 +1,7 @@
+{% capture image %}{%if post.image %}{{post.image}}{% else %}http://placehold.it/354x180{%endif%}{% endcapture %}
+
+{% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+
 {% if position == 1 and pagination.page == 1 %}
 <div class="small-12 medium-6 large-12 columns">
     <article class="index large">
@@ -8,12 +12,11 @@
         <div class="row">
             <div class="small-12 large-6 columns">
                 <a rel="full-article" href="{{ root_url }}{{ post.url }}">
-                    <img src="http://placehold.it/354x180"/>
+                    <img src="{{image}}" title="{{post.title}}" alt="{{post.title}}" />
                 </a>
             </div>
             <div class="small-12 large-6 columns entry-content">
                 {{ content | excerpt }}
-                {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
                 {% if excerpted == 'true' %}
                         <a rel="full-article" href="{{ root_url }}{{ post.url }}">&raquo;</a>
                 {% endif %}
@@ -32,12 +35,11 @@
         <div class="row">
             <div class="small-12 large-6 large-push-6 columns">
                 <a rel="full-article" href="{{ root_url }}{{ post.url }}">
-                    <img src="http://placehold.it/354x180"/>
+                    <img src="{{image}}" title="{{post.title}}" alt="{{post.title}}" />
                 </a>
             </div>
             <div class="small-12 large-6 large-pull-6 columns entry-content">
                 {{ content | excerpt }}
-                {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
                 {% if excerpted == 'true' %}
                         <a rel="full-article" href="{{ root_url }}{{ post.url }}">&raquo;</a>
                 {% endif %}
@@ -56,12 +58,11 @@
         <div class="row">
             <div class="small-12 columns">
                 <a rel="full-article" href="{{ root_url }}{{ post.url }}">
-                    <img src="http://placehold.it/354x180"/>
+                    <img src="{{image}}" title="{{post.title}}" alt="{{post.title}}" />
                 </a>
             </div>
             <div class="small-12 columns">
                 {{ content | excerpt }}
-                {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
                 {% if excerpted == 'true' %}
                         <a rel="full-article" href="{{ root_url }}{{ post.url }}">&raquo;</a>
                 {% endif %}

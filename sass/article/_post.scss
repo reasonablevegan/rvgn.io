@@ -7,7 +7,43 @@ article.post {
 		}
 
 		img {
-			margin-bottom: 1.2em;
+			margin-bottom: 2em;
 		}
+
+		.categories {
+			color: white;
+
+			a {
+				@include label(
+				    // This options sets label padding
+				    $padding:7px 16px 9px,
+				    // This option sets label text-size
+				    $text-size: 0.8em,
+				    // This option sets label background-color
+				    $bg:#2ba6cb,
+				    // This option sets the radius of the label
+				    $radius:4px
+			    );
+			}
+		}
+	}
+
+	.article-navigation {
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-top: 1px solid $light-grey;
+		border-bottom: 1px solid $light-grey;
+		height: 2.5em;
+
+		a {
+			margin-top: 0.6em;
+		}
+	}
+
+	.entry-content {
+		blockquote p {
+			color: $body-font-color;
+			font-weight: lighter;
+		} 
 	}
 }

@@ -5,26 +5,27 @@ single: true
 <article class="post">
     <div class="row">
         <div class="small-12 columns">
-              <header>
-                  <h1 class="page-title">{{ page.title }}</h1>
-                  {% include post/meta.html %}
-                  <img src="http://placehold.it/354x180"/>
-              </header>              
+            <header>
+                <h1 class="page-title">{{ page.title }}</h1>
+                {% include post/meta.html %}
+                <div class="image-container">
+                    <img src="{{page.image}}" title="{{page.title}}" alt="{{page.title}}" />
+                </div>
+                {% include post/categories.html %}
+            </header>              
+            <div class="article-navigation">
+              {% if page.previous.url %}
+                <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous article</a>
+              {% endif %}
+              {% if page.next.url %}
+                <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next article &raquo;</a>
+              {% endif %}
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="columns small-12">
-            {% if index %}
-              <div class="entry-content">{{ content | excerpt }}</div>
-              {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-              {% if excerpted == 'true' %}
-                <footer>
-                  <a rel="full-article" class="button tiny radius" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
-                </footer>
-              {% endif %}
-            {% else %}
             <div class="entry-content">{{ content }}</div>
-            {% endif %}
         </div>
     </div>
     <div class="row">
@@ -33,23 +34,22 @@ single: true
             <p class="meta">
               <!--{% include post/author.html %}-->
               <!--{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}-->
-              {% include post/categories.html %}
             </p>
             {% unless page.sharing == false %}
               {% include post/sharing.html %}
             {% endunless %}
-            <p class="meta">
+          </footer>        
+            <div class="article-navigation">
               {% if page.previous.url %}
-                <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+                <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous article</a>
               {% endif %}
               {% if page.next.url %}
-                <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
+                <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next article &raquo;</a>
               {% endif %}
-            </p>
-          </footer>        
+            </div>
         {% if site.disqus_short_name and page.comments == true %}
           <section>
-            <h1>Comments</h1>
+            <h4>We want your feedback</h4>
             <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
           </section>
         {% endif %}

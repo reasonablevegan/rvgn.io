@@ -1,0 +1,19 @@
+.main-identity {
+	line-height: 40px;
+	font-size: 15px;
+
+	a {
+		display: block;
+	    font-weight: normal;
+	    padding: 0 15px;
+	}
+
+	span.branding {
+		font-size: 20px;
+
+		span {
+			font-size: 15px;
+			font-weight: bold;
+		}
+	}
+}

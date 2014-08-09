@@ -17,7 +17,7 @@ $topbar-dropdown-link-bg: white;
 .top-bar {
 	@include box-shadow(#a8a8a8 0px 1px 2px);
 
-	.name h1 a {
+	.name a {
 		color: $secondary-color !important;
 	}
 }
