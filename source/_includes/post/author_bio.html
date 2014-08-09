@@ -1,0 +1,12 @@
+{% if post.author %}
+  {% assign author = post.author %}
+{% elsif page.author %}
+  {% assign author = page.author %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+{% if author %}
+	<div class="author-bio component">
+		<strong>{{author}}</strong> selfies Cosby sweater asymmetrical cardigan kogi. Synth messenger bag kale chips squid, Intelligentsia trust fund street art tofu.
+	</div>
+{% endif %}

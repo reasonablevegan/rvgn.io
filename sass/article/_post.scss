@@ -1,5 +1,6 @@
 article.post {
 	header {
+
 		text-align: center;
 
 		h1 {
@@ -45,5 +46,27 @@ article.post {
 			color: $body-font-color;
 			font-weight: lighter;
 		} 
+	}
+
+	.author-bio {
+		background-color: $light-grey;
+		padding: 20px;
+		height: auto;
+		line-height: 1.2em;
+		font-weight: lighter;
+
+		img {
+			float: left;
+			margin-right: 20px;
+		}
+
+		p {
+			clear: left;
+		}
+	}
+
+	.component {
+		margin-bottom: 1em;
+		margin-top: 1em;
 	}
 }

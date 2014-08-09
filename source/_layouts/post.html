@@ -31,13 +31,10 @@ single: true
     <div class="row">
         <div class="columns small-12">
           <footer>
-            <p class="meta">
-              <!--{% include post/author.html %}-->
-              <!--{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}-->
-            </p>
             {% unless page.sharing == false %}
               {% include post/sharing.html %}
             {% endunless %}
+            {% include post/author_bio.html %}
           </footer>        
             <div class="article-navigation">
               {% if page.previous.url %}
@@ -50,6 +47,7 @@ single: true
         {% if site.disqus_short_name and page.comments == true %}
           <section>
             <h4>We want your feedback</h4>
+            <p>Reasonable Vegan is a constantly evolving community project. While we strive to research thoroughly and aspire to perfect correctness, we fully acknowledge that we make errors and omissions. The only way we're going to find out how wrong we are is if someone tells us.</p>
             <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
           </section>
         {% endif %}
