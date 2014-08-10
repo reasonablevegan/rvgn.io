@@ -1,1 +1,31 @@
-{% include custom/footer.html %}
+<div class="links">
+	<div class="row">
+		<div class="columns small-12">
+			<h3>Recent posts</h3>
+		</div>
+	</div>
+	<div class="row">
+		{% for item in site.categories %}
+			<div class="small-12 medium-4 columns category">				
+				<h5><a href="/blog/categories/{{ item[0] }}/">{{ item[0] | capitalize }}</a></h5>
+				<ul>
+					{% capture category %}{{ item[0]}}{% endcapture %}
+					{% for post in site.categories[category] limit: site.recent_posts  %}
+					<li class="post">
+				        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+				        {% include post/meta.html %}
+				    </li> 
+				    {% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="branding">
+	<div class="row">
+		<div class="columns small-12 medium-3 small-centered logo">
+			<p><span class="icon icon-logo-small icon-5x"></span></p>
+			Reasonable <strong>Vegan</strong>
+		</div>
+	</div>
+</div>

@@ -12,6 +12,10 @@ article.index {
 	    margin-bottom: 0px;
 	}
 
+	@media #{$medium-only} { 
+		height: 540px;
+	}
+
 	@media #{$large-up} { 
 		h1 {
 			font-size: 1.8em;

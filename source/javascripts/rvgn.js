@@ -7,7 +7,7 @@ $(document).on("ready",function(){
 	}
 
   // Blurring concerns
-  var BLUR_RADIUS = 80;
+  var BLUR_RADIUS = 100;
 
   var canvas = document.getElementById("heroCanvas");
 

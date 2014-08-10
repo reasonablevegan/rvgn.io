@@ -10,12 +10,15 @@
 
 		.columns {
 
+			text-align: center;
+
 		 	a {
 				color: #333;
 				display: table;
 			    height: $mobile-height;
 			    text-align: center;
 			    width: 100%;
+			    margin: 0 auto;
 
 			    span {
 			    	&.tagline {

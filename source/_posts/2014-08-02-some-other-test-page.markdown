@@ -3,7 +3,8 @@ layout: post
 title: "Some other test page"
 date: 2014-08-02 10:44:38 +0100
 comments: true
-categories: 
+categories: science
+image: /media/francione.jpg
 ---
 Occupy Intelligentsia single-origin coffee bespoke sriracha four loko Bushwick. Helvetica jean shorts VHS, kale chips organic ennui forage. Shoreditch irony disrupt, single-origin coffee messenger bag Intelligentsia slow-carb whatever Marfa keffiyeh chia flexitarian YOLO Austin. Shoreditch salvia pour-over, cardigan Neutra single-origin<!--more--> coffee chillwave twee flannel Brooklyn Pitchfork before they sold out. Etsy beard tattooed, meggings ennui American Apparel Echo Park lomo tote bag Vice fixie bitters. Selfies pickled paleo pop-up. 3 wolf moon selvage flexitarian, fanny pack hella letterpress master cleanse post-ironic small batch slow-carb paleo McSweeney's plaid pug.
 
