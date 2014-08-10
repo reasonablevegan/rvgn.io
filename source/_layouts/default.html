@@ -2,17 +2,7 @@
 {% include head.html %}
 <body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
 	<nav role="navigation">{% include navigation.html %}</nav>
-	<div id="masthead">
-	  	<div class="row">
-	  		<div class="small-12 columns">
-	  			<a href="/">
-	  				<span class="title">Reasonable <strong>Vegan</strong></span>
-		  			<span class="icon icon-logo-small icon-2x"></span>
-		  			<span class="tagline">Evidence-based compassion.<br />Some clever copy goes here. We think.</span>
-	  			</a>
-	  		</div>
-	  	</div>  	
-  	</div>
+	{% include masthead.html %}
 	<div id="content" class="row">
 		<div class="columns small-12 large-9">
 			{{ content | expand_urls: root_url }}
