@@ -15,6 +15,12 @@ article.index {
 		height: 540px;
 	}
 
+	@media #{$medium-up} { 
+		&.small {
+			height: 540px;
+		}
+	}
+
 	@media #{$large-up} { 
 		h1 {
 			font-size: 1.8em;
