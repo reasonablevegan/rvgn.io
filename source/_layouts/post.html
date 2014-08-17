@@ -17,12 +17,9 @@ single: true
                         <img src="{{page.image}}" title="{{page.title}}" alt="{{page.title}}" data-blurimage="" />
                     </div>
                     {% include post/categories.html %}
-                      <div class="share">
-                        <a href=""><span class="icon icon-2x icon-twitter"></span></a>
-                        <a href=""><span class="icon icon-2x icon-facebook"></span></a>
-                        <a href=""><span class="icon icon-2x icon-googleplus"></span></a>
-                        <a href=""><span class="icon icon-2x icon-mail"></span></a>
-                    </div>
+                    {% unless page.sharing == false %}
+                      {% include post/sharing.html %}
+                    {% endunless %}
                 </div>
             </div>
         </header>  

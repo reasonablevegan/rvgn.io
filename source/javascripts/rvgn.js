@@ -76,4 +76,16 @@ $(document).on("ready",function(){
           drawBlur();
         }
     }
+
+    // Social share links
+    $('a.social-share').click(function(e){
+     
+        e.preventDefault();
+        window.open($(this).attr('href'), 
+                    'twitterwindow', 
+                    'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+($(window).width()/2 - 275) +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+
+        return
+     
+    });
 });

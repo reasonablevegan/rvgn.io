@@ -2,7 +2,32 @@
 
 {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
 
-{% if position == 1 and pagination.page == 1 %}
+{% if archive == true %}
+<div class="small-12 medium-6 large-12 columns">
+    <article class="index medium">
+        <header>
+            <h2 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a></h2>
+            {% include post/meta.html %}
+        </header>
+        <div class="row">
+            <div class="small-12 large-6 large-push-6 columns">
+                <a rel="full-article" href="{{ root_url }}{{ post.url }}">
+                    <img src="{{image}}" title="{{post.title}}" alt="{{post.title}}" />
+                </a>
+            </div>
+            <div class="small-12 large-6 large-pull-6 columns entry-content">
+                <p>
+                    {{ content | excerpt }}
+                    {% if excerpted == 'true' %}
+                            <a rel="full-article" href="{{ root_url }}{{ post.url }}">&raquo;</a>
+                    {% endif %}
+                </p>
+                <a href="{{ root_url }}{{ post.url }}" class="button small expand show-for-small-only">Read on &raquo;</a>
+            </div>
+        </div>
+    </article>
+</div>
+{% elsif position == 1 and pagination.page == 1 %}
 <div class="small-12 medium-6 large-12 columns">
     <article class="index large">
         <header>
