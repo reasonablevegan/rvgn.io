@@ -5,6 +5,9 @@ comments: false
 ---
 
 <div class="row blog-index">
+	<div class="columns small-12">
+		<h1 class="minimise">Category: {{page.category | titlecase}}</h2>
+	</div>
 {% assign archive = true %}
 {% for post in site.categories[page.category] %}
     {% assign content = post.content %}

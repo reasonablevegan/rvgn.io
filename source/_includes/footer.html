@@ -7,7 +7,7 @@
 	<div class="row">
 		{% for item in site.categories %}
 			<div class="small-12 medium-4 columns category">				
-				<h5><a href="/categories/{{ item[0] | to_url }}/">{{ item[0] | capitalize }}</a></h5>
+				<h5><a href="/category/{{ item[0] | to_url }}/">{{ item[0] | capitalize }}</a></h5>
 				<ul>
 					{% capture category %}{{ item[0]}}{% endcapture %}
 					{% for post in site.categories[category] limit: site.recent_posts  %}

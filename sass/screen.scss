@@ -14,3 +14,16 @@
 @import "content";
 @import "time";
 @import "footer";
+
+h1 {
+	&.minimise {
+		@include label(
+		    $padding: 7px 16px 9px,
+		    $text-size: 1em,
+		    $bg: rgba(black, 0.5),
+		    $radius:4px
+	    );
+
+	    margin-bottom: 1em;
+	}
+}
