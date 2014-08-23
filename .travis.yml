@@ -10,7 +10,7 @@ before_script:
   - base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa-yttrium
   - chmod 600 ~/.ssh/id_rsa-yttrium
   # Disable SSH server fingerprint verification
-  #- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host yttrium\n\tStrictHostKeyChecking no\n\tHostName 178.79.165.98\n\tUser paul\n\tIdentityFile ~/.ssh/id_rsa-yttrium\n" >> ~/.ssh/config
 script: 
   - bundle exec rake generate
   - bundle exec rake deploy
