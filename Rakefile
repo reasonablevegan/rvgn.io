@@ -8,7 +8,7 @@ ssh_user       = "paul@178.79.165.98"
 ssh_port       = "22"
 document_root  = "/mnt/sites/rvgn"
 rsync_delete   = false
-rsync_args     = ""  # Any extra arguments to pass to rsync
+rsync_args     = "-e 'ssh -i "+ENV['HOME']+"/.ssh/id_rsa-yttrium'" 
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
