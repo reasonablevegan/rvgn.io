@@ -63,15 +63,101 @@ footer#main-footer {
 
 	.branding {
 		background-color: $primary-color;
-		padding: 1em 0;
+		padding: 3em 0;
 
 		color: white;
 
 		.logo {
 			text-align: center;
 
+			padding: 0 1em;
+
 			p {
 				margin-bottom: 0.25em;
+			}
+		}
+
+		.menu-container {
+			margin-bottom: 1em;
+
+			.menu {
+
+				text-align: center;
+				border-bottom: 1px solid rgba(white, 0.2);
+				margin-bottom: 1em;
+				padding-bottom: 1em;
+
+				@media #{$medium-up} { 
+					border-right: 1px solid rgba(white, 0.2);
+					border-bottom: none;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+
+				h6 {
+					color: rgba(white, 0.5);;
+					font-weight: lighter;
+					text-transform: uppercase;
+				}
+
+				&:last-of-type {
+					border-right: none;
+					border-bottom: none;
+					margin-bottom: 0;
+				}
+
+				a {
+					color: white;
+
+					&.button {
+						 @include button(
+						    $button-sml,
+						    rgba(black, 0.2),
+						    false,
+						    false,
+						    false,
+						    false
+						  );
+
+						 color: $secondary-color !important;
+					}
+				}
+
+				p {
+					font-weight: lighter;
+					line-height: 1.2em;
+					padding: 0.5em 1em;
+					font-size: 0.9em;
+
+					&.branding {
+						line-height: 1.8em;
+					}
+				}
+
+				nav {
+					text-align: center;
+					padding-top: 0.5em;
+
+					a {
+						display: block;
+						margin-bottom: 0.5em;
+					}
+				}
+
+				ul {
+					margin: 0;
+					margin-bottom: 1em;
+					padding: 0;
+					width: 100%;
+
+					li {
+						list-style: none;
+					}
+				}
+
+				a:hover {
+					color: $secondary-color;
+				}
 			}
 		}
 	}
