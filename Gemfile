@@ -15,6 +15,7 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'travis'
+  gem 'travis-lint'
 end
 
 gem 'sinatra', '~> 1.4.2'
