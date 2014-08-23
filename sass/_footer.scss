@@ -74,5 +74,25 @@ footer#main-footer {
 				margin-bottom: 0.25em;
 			}
 		}
+
+		.menu-container {
+			margin-bottom: 1em;
+
+			.menu {
+				a {
+					color: white;
+				}
+
+				nav {
+					text-align: center;
+
+					a {
+						display: block;
+						margin-bottom: 0.5em;
+						font-style: 0.85em;
+					}
+				}
+			}
+		}
 	}
 }
