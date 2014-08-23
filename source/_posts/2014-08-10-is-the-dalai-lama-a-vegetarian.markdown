@@ -1,14 +1,16 @@
 ---
+date: "2014-08-10 16:51:50 +0100"
 layout: post
 title: "Is the Dalai Lama a vegetarian?"
-date: 2014-08-10 16:51:50 +0100
 comments: true
-categories:
+categories: 
   - current affairs
 author: Rebecca Fox
 image: /media/lama.jpg
+published: true
 ---
-The Dalai Lama is often mistakenly thought of as the leader of both Buddhism and the Tibetan diaspora but he is neither of these things. The Dalai Lama is a very influential monk in one school of Tibetan Buddhism and has recently resigned from his position as Tibetan head of state, leaving political decisions to a government<!--more-->  of Tibetan officials. He has spent most of his life advocating for Tibetan refugees and has travelled the world speaking and writing about compassion. Tibetan Buddhists visiting the Dalai Lama’s monastery in McLeod Ganj seem to be under the impression that his favourite food is Ferrero Rocher, and when I visited I saw huge piles of the golden foil-wrapped chocolates surrounding images of him and the Buddha. I don't know what the Dalai Lama’s favourite food is, but at the time I was under the impression that he must be at least vegetarian.
+
+The Dalai Lama is often mistakenly thought of as the leader of both Buddhism and the Tibetan diaspora but he is neither of these things. The Dalai Lama is a very influential monk in one school of Tibetan Buddhism and has recently resigned from his position as Tibetan head of state, leaving political decisions to a government<!--more-->  of Tibetan officials. He has spent most of his life advocating for Tibetan refugees and has travelled the world speaking and writing about compassion. 
 
 ##Does Buddhism even *promote* veganism?
 
