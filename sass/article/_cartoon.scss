@@ -1,0 +1,167 @@
+@import "tooltips";
+
+article.cartoon {
+	header {
+		text-align: center;
+		margin-bottom: 2em;
+		position: relative;
+		width: 100%;
+		padding: 1em 0;
+		overflow: hidden;
+		background-color: $primary-color;
+
+	    .row {
+	    	position: relative;
+		    z-index: 2;
+	    }
+
+		h1 {
+			line-height: 1.1em;
+			color: white;
+		}
+
+		img {
+			margin-bottom: 2em;
+			border: 2px solid rgba(white, 0.8);
+		}
+
+		.meta {
+			color: rgba(white, 0.8);
+			font-weight: lighter;
+
+			a {
+				color: white;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+
+		.categories {
+			color: transparent;
+
+			a {
+				@include label(
+
+				    // This options sets label padding
+				    $padding:7px 16px 9px,
+				    // This option sets label text-size
+				    $text-size: 0.8em,
+				    // This option sets label background-color
+				    $bg: rgba(black, 0.5),
+				    // This option sets the radius of the label
+				    $radius:4px
+			    );
+
+			    color: $secondary-color;
+
+			    &:hover {
+					color: white;
+				}
+			}
+		}
+
+		.sharing {
+
+			margin-top: 1.5em;
+			margin-bottom: 0.5em;
+
+			a {
+				color: white;
+				margin: 0 0.25em;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+
+	.article-navigation {
+		margin-bottom: 2em;
+		border-top: 1px solid $light-grey;
+		border-bottom: 1px solid $light-grey;
+		height: 2.5em;
+
+		a {
+			margin-top: 0.6em;
+		}
+	}
+
+	.entry-content {
+
+		h2 {
+			font-size: 1.125rem;
+			font-weight: normal;
+		}
+
+		blockquote p, blockquote li {
+			color: $body-font-color;
+			font-weight: lighter;
+		} 
+
+		a {
+			&.footnote {
+				vertical-align: super;
+				font-size: 0.63em;
+			    font-weight: bold;
+			    margin-top: -60px;
+				padding-top: 60px;
+			}
+		}
+	}
+
+	.author-bio {
+		background-color: $light-grey;
+		padding: 20px;
+		height: auto;
+		line-height: 1.2em;
+		font-weight: lighter;
+
+		img {
+			float: left;
+			margin-right: 20px;
+		}
+
+		p {
+			clear: left;
+		}
+	}
+
+	.component {
+		margin-bottom: 2em;
+		margin-top: 2em;
+	}
+
+	.sharing {
+		margin-top: 1em;
+		text-align: center;
+
+		a {
+			margin: 0 0.25em;
+		}
+	}
+
+	#footnotes {
+		li {
+			margin-top: -60px;
+			padding-top: 60px;
+
+			a {
+				word-wrap: break-word;
+				-ms-word-break: break-all;
+
+			     /* Be VERY careful with this, breaks normal words wh_erever */
+			     word-break: break-all;
+
+			     /* Non standard for webkit */
+			     word-break: break-word;
+
+				-webkit-hyphens: auto;
+				-moz-hyphens: auto;
+			    hyphens: auto;
+			}
+		}
+	}
+}

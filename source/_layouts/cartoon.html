@@ -1,0 +1,77 @@
+---
+single: true
+---
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+<body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+    <nav role="navigation">{% include navigation.html %}</nav>
+    {% include masthead.html %}
+    <article class="cartoon">
+        <header>
+            <div class="row">
+                <div class="columns small-12">
+                    <h1 class="page-title">{{ page.title }}</h1>
+                    {% include post/meta.html %}
+                    {% include post/categories.html %}
+                    {% unless page.sharing == false %}
+                      {% include post/sharing.html %}
+                    {% endunless %}
+                </div>
+            </div>
+        </header>  
+        <div id="content" class="row">
+            <div class="columns small-12 large-9">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="article-navigation">
+                          {% if page.previous.url %}
+                            <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous article</a>
+                          {% endif %}
+                          {% if page.next.url %}
+                            <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next article &raquo;</a>
+                          {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns small-12">
+                        <img src="{{page.cartoon}}" alt="{{page.title}}" />
+                        <div class="entry-content">{{ content }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns small-12">
+                      <footer>
+                        {% unless page.sharing == false %}
+                          {% include post/sharing.html %}
+                        {% endunless %}
+                        {% include post/author_bio.html %}
+                      </footer>        
+                        <div class="article-navigation">
+                          {% if page.previous.url %}
+                            <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous article</a>
+                          {% endif %}
+                          {% if page.next.url %}
+                            <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next article &raquo;</a>
+                          {% endif %}
+                        </div>
+                    {% if site.disqus_short_name and page.comments == true %}
+                      <section>
+                        <h4>We want your feedback</h4>
+                        <p>Reasonable Vegan is a constantly evolving community project. While we strive to research thoroughly and aspire to perfect correctness, we fully acknowledge that we make errors and omissions. The only way we're going to find out how wrong we are is if someone tells us.</p>
+                        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+                      </section>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>      
+            <div class="column large-3 hide-for-medium-down">
+                {% include custom/sidebar.html %}           
+            </div>
+        </article>
+    </div>    
+    <footer id="main-footer" role="contentinfo">{% include footer.html %}</footer>
+    {% include after_footer.html %}
+</body>
+</html>
+
