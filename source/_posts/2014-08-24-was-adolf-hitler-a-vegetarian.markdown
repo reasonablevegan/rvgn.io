@@ -4,7 +4,7 @@ layout: post
 title: "Was Adolf Hitler a Vegetarian?"
 comments: true
 categories: 
-  - current affairs
+  - anyalysis
   - opinion
 author: Rebecca Fox
 image: /media/hitler.jpg

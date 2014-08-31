@@ -44,13 +44,84 @@ $(document).on("ready",function(){
     });
 
     if (footnotes.length) {
-        var footnotes_el = $('<ol id="footnotes"></ol>');
+
+        var footnotes_el   = $('<ol id="footnotes"></ol>');
+        var article_footer = $('article.post footer');
 
         for (var i = 0; i < footnotes.length; i++) {
             footnotes_el.append("<li id='footnote-"+footnotes[i].idx+"'><a href='#"+footnotes[i].id+"'><i class='fa fa-caret-up'></i></a> " + footnotes[i].title + ". <a href='"+footnotes[i].href+"'>"+footnotes[i].href+"</a></li>");
         }
 
-        $('article.post footer').append("<h4>References</h4>").append(footnotes_el);
+        // Make sure to expand all referenced when a footnote
+        // link is clicked
+        $('a.footnote').click(function(){
+
+            var href = $(this).attr("href")
+
+            showFootnotes(function(){
+                location.href = href;
+            });
+            
+            return true;
+        });
+
+        function showFootnotes(callback) {
+
+            var main_control = $('a.accordion-control', article_footer);
+
+            if (main_control.data("visible") === true) {
+
+                if (typeof callback == "function")
+                    callback();
+
+                return;
+            }
+
+            $("p.accordion-tooltip").fadeOut("fast",function(){                    
+                    main_control.html("hide");
+                    main_control.data("visible",true);
+                    footnotes_el.slideDown("fast", typeof callback == "function" ? callback : null); 
+                });
+        }
+
+        function hideFootnotes() {
+
+            var main_control = $('a.accordion-control', article_footer);
+
+            footnotes_el.slideUp("fast", function(){
+                    $("p.accordion-tooltip").fadeIn("fast");
+                    main_control.html("show");
+                    main_control.data("visible",false);
+                });
+        }
+
+        function toogleFootnotes() {
+
+            var main_control = $('a.accordion-control', article_footer);
+
+            if (main_control.data("visible") === false) {
+                showFootnotes();
+            } else {
+                hideFootnotes(); 
+            }
+        }
+
+        article_footer.append("<h4>References</h4>").append(footnotes_el);
+
+        if (footnotes.length > 5) {
+
+            footnotes_el.hide();
+
+            $("h4",article_footer).append("<a href='' class='accordion-control toggle-references' data-visible='false'>show</a>")
+                                  .after("<p class='accordion-tooltip'>"+footnotes.length+" references hidden. <a href='' class='toggle-references'>Show all references</a>.</p>");
+
+            article_footer.addClass("accordion");
+
+            $("a.toggle-references", article_footer).click(function(){
+                toogleFootnotes();
+                return false;
+            });
+        }        
     }
 
     // Blurring

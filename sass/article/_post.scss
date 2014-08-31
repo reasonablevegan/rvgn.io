@@ -158,6 +158,26 @@ article.post {
 		}
 	}
 
+	footer {
+		a.accordion-control {
+			@include label(
+			    $padding: 7px 10px 9px,
+			    $text-size: 0.7em,
+			    $bg: rgba(black, 0.25),
+			    $radius:8px
+		    );
+
+		    position: relative;
+		    top: -3px;
+		    margin-left: 10px;
+		}
+
+		p.accordion-tooltip {
+			font-style: italic;
+			margin-bottom: 2em;
+		}
+	}
+
 	#footnotes {
 		li {
 			margin-top: -60px;
