@@ -225,6 +225,9 @@ task :deploy do
     Rake::Task[:generate].execute
   end
 
+  Rake::Task[:minify_js].execute
+  Rake::Task[:minify_html].execute
+
   Rake::Task[:copydot].invoke(source_dir, public_dir)
   Rake::Task["#{deploy_default}"].execute
 end

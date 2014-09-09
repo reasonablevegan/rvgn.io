@@ -9,13 +9,24 @@ $(document).on("ready",function(){
 
     // Footnotes
     var footnotes = [];
+    var idx = 0;
+    var host_regex = new RegExp(location.host);
 
-    $('.entry-content a').each(function(idx) {
+    $('.post .entry-content a').each(function() {
 
         var el = $(this);
 
-        if (el.html() != "*") 
+        if (el.html() != "*") {
+
+            if (!host_regex.test(el.attr('href')) && el.attr('href').charAt(0) != '/') {
+                // Make an 'external' link
+                el.addClass('external-link');
+            }
+
+            el.attr("target","_blank");
+
             return;
+        }            
 
         // Index is zero-based; make human readable.
         ++idx;
@@ -123,6 +134,27 @@ $(document).on("ready",function(){
             });
         }        
     }
+
+    // Image figures
+    $('.post .entry-content .figure').each(function(idx) {
+
+        var el = $(this);
+        ++idx;
+
+        el.wrap('<p class="figure"></p>');
+
+        var cta = "";
+
+        if (el.prop("tagName") == "IMG") {
+            cta = "<a class='button expand show-for-small-only' target='_blank' href='"+el.attr("src")+"'>View this in a new tab</a>";
+        } 
+        else if (el.prop("tagName") == "TABLE") {
+            cta = " [<a target='_blank' href='"+el.data("source")+"'>source</a>]";
+        }
+
+        el.after("<div><em>Figure "+idx+" "+": "+el.attr("title")+"</em>"+cta+"</div>");
+
+    });
 
     // Blurring
     var BLUR_RADIUS = 100;

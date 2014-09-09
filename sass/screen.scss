@@ -28,3 +28,18 @@ h1 {
 	    margin-bottom: 1em;
 	}
 }
+
+a.external-link:after {
+	content: "\f08e";
+	display: inline-block;
+    font-family: FontAwesome;
+    font-size: 0.7em;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 2px;
+    margin-right: 1px;
+}
+
+em, i {
+	font-size: 0.95em;
+}

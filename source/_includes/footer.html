@@ -6,7 +6,7 @@
 	</div>
 	<div class="row">
 		{% for item in site.categories %}
-			<div class="small-12 medium-6 large-4 columns category">				
+			<div class="small-12 medium-4 large-4 columns category">				
 				<h5><a href="/category/{{ item[0] | to_url }}/">{{ item[0] | capitalize }}</a></h5>
 				<ul>
 					{% capture category %}{{ item[0]}}{% endcapture %}
@@ -18,10 +18,14 @@
 						  {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
 						  {% include post/post_date.html %}{{ time }}
 						</p>
-				    </li> 
+				    </li> 				    			
 				    {% endfor %}
 				</ul>
 			</div>
+			{% if forloop.index == 3 %}
+		</div>
+		<div class="row">
+			{% endif %}
 		{% endfor %}
 	</div>
 </div>

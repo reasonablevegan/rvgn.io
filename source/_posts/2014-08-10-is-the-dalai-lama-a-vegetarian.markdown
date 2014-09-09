@@ -5,7 +5,7 @@ title: "Is the Dalai Lama a vegetarian?"
 comments: true
 categories: 
   - current affairs
-  - anyalysis
+  - analysis
 author: Rebecca Fox
 image: /media/lama.jpg
 published: true
