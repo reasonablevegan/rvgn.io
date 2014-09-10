@@ -43,3 +43,10 @@ a.external-link:after {
 em, i {
 	font-size: 0.95em;
 }
+
+@media #{$medium-up} {
+
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		background-color: white;
+	}
+}

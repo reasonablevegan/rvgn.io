@@ -99,6 +99,15 @@ google_analytics_tracking_id:
 facebook_like: true
 
 # ----------------------- #
+#  Links                  #
+# ----------------------- #
+
+links:
+  - name: "Skeptical Vegan"
+    desc: "Skeptical analyses of vegan and animal rights issues"
+    link: "http://skepticalvegan.com/"
+
+# ----------------------- #
 #  Prose.io Settings      #
 # ----------------------- #
 

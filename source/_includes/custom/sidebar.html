@@ -3,13 +3,13 @@
 		<img src="{{ root_url }}/images/logo/full.svg" title="Reasonable Vegan" />
 	</a>
 
-	<div class="disclaimer">
+	<section class="disclaimer">
 		{% include about_us.html %}	
 		<a href="" class="button small expand">More about us <i class="fa fa-angle-double-right"></i></a>
-	</div>
+	</section>
 
 	{% if page.seealso %}
-		<div class="futher-reading">
+		<section class="light-panel futher-reading">
 			<h5>Further reading</h5>
 
 			<ul class="side-nav">
@@ -17,11 +17,11 @@
 				<li><a href="{{link.link}}" target="blank"><i class="fa fa-chevron-circle-right"></i> {{link.name}}</a>{{link.description}}</li>
 			{%endfor%}
 			</ul>
-		</div>
+		</section>
 	{% endif %}
 
 	{% if page.related %}
-		<div class="futher-reading">
+		<section class="light-panel related-articles">
 			<h5>Related articles</h5>
 
 			<ul class="side-nav">
@@ -29,6 +29,11 @@
 				<li><a href="{{link.link}}" target="blank"><i class="fa fa-leaf"></i> {{link.name}}</a></li>
 			{%endfor%}
 			</ul>
-		</div>
+		</section>
 	{% endif %}
+
+	{%unless (page.seealso and page.related %}
+		{% assign links_mode = "sidebar" %}
+		{% include asides/links.html %}
+	{%endunless%}
 </aside>

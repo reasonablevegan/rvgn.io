@@ -7,6 +7,16 @@
 {% endif %}
 {% if author %}
 	<div class="author-bio component">
-		<strong>{{author}}</strong> selfies Cosby sweater asymmetrical cardigan kogi. Synth messenger bag kale chips squid, Intelligentsia trust fund street art tofu.
+		<p><strong>{{author}}</strong>
+
+		{%if author == "Jamie Foley"%}
+		 was raised in the American South on a steady diet of <a href="http://www.quackwatch.com/01QuackeryRelatedTopics/PhonyAds/silverad.html" target="_blank" class="external-link">colloidal silver</a>, cryptozoology, and conspiracy theories. His contrarian curiosity and early passion for science eventually led him to skepticism and rationalism. He now makes his home in Oakland, California as he works on furthering his education and pursuing his interest in biotechnology and genetic engineering. A vegan for a decade, he enjoys exploring the intersections between science, animal rights, and social justice.</p>
+		 <p>Jamie blogs at <a href="http://skepticalvegan.com/" class="external-link" target="_blank">skepticalvegan.com</a> and tweets as <a href="https://twitter.com/skepticalvegan" target="_blank" class="external-link">@skepticalvegan</a>.
+		{% elsif author == "Rebecca Fox" %}
+		is an artist, vegan and skeptic from Brighton, UK.
+		{% else %}
+		is the author of this article
+		{%endif%}
+		</p>
 	</div>
 {% endif %}

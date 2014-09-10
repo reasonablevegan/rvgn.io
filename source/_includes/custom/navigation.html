@@ -1,7 +1,7 @@
 {% if site.fixed_navigation %}
 <div class="sticky" data-options="">
 {% endif %}
-  <nav class="top-bar" data-topbar>
+  <nav class="top-bar" data-topbar data-options="scrolltop:false;">
 
     <ul class="title-area">
         <li class="name">
@@ -9,15 +9,21 @@
                 <a href="{{ root_url }}/"><span class="icon icon-push icon-logo-small"></span> <span class="branding"><span>R</span>vgn</span></a>
             </div>
         </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+       <li class="toggle-topbar menu"><a href="#"><span>Menu <i class="fa fa-navicon"></i></span></a></li>
     </ul>
 
     <section class="top-bar-section">
 
       <ul class="main-navigation right">
-          <li><a><i class="fa fa-twitter"></i></a></li>
-          <li><a><i class="fa fa-facebook"></i></a></li>
-          <li><a><i class="fa fa-google-plus"></i></a></li>
+          <li class="show-for-small-only"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+            {% for item in site.categories %}
+          <li class="show-for-small-only"><a href="/category/{{ item[0] | to_url }}/"><i class="fa fa-leaf"></i> {{ item[0] | capitalize }}</a></li>
+            {% endfor %}
+          <li><a href="/about"><i class="fa fa-info-circle"></i> About us</a><li>
+          <li><a href="/contribute"><i class="fa fa-file-text"></i> Contribute</a></li>
+          <li><a href="/links"><i class="fa fa-star"></i> Links</a></li>
+          <li class="show-for-medium-up"><a><i class="fa fa-twitter"></i></a></li>
+          <li class="show-for-medium-up"><a><i class="fa fa-rss"></i></a></li>
       </ul>
 
     </section>

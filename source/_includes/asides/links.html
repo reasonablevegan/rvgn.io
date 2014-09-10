@@ -1,0 +1,17 @@
+{% if links_mode == "sidebar" e %}
+<section class="light-panel related-articles">
+	<h5>Our network</h5>
+
+	<ul class="side-nav">
+	{% for link in site.links limit: 10 %}
+		<li><a href="{{link.link}}" target="blank"><i class="fa fa-chevron-circle-right"></i> {{link.name}}</a>{{link.desc}}</li>
+	{%endfor%}
+	</ul>
+</section>
+{% elsif links_mode == "footer" %}
+<ul>
+	{% for link in site.links limit: 10 %}
+		<li><a href="{{link.link}}" target="blank"><i class="fa fa-chevron-circle-right"></i> {{link.name}}</a></li>
+	{%endfor%}
+</ul>
+{% endif %}

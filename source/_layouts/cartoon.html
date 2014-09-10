@@ -6,7 +6,7 @@ single: true
 <body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
     <nav role="navigation">{% include navigation.html %}</nav>
     {% include masthead.html %}
-    <article class="cartoon">
+    <article class="cartoon post">
         <header>
             <div class="row">
                 <div class="columns small-12">
@@ -35,7 +35,7 @@ single: true
                 </div>
                 <div class="row">
                     <div class="columns small-12">
-                        <img src="{{page.cartoon}}" alt="{{page.title}}" />
+                        <p><img src="{{page.cartoon}}" alt="{{page.title}}" /></p>
                         <div class="entry-content">{{ content }}</div>
                     </div>
                 </div>
