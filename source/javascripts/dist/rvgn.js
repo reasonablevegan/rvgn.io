@@ -180,6 +180,16 @@ $(document).on("ready",function(){
 
     });
 
+    // Lists
+    $('.post .entry-content ul').each(function(){
+
+        var list = $(this);
+
+        list.addClass("fa-ul");
+
+        $('li',list).prepend('<i class="fa-li fa fa-caret-right"></i>');
+    });
+
     // Social share links
     $('a.social-share').click(function(e){
      

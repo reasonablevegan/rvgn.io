@@ -19,11 +19,12 @@
             {% for item in site.categories %}
           <li class="show-for-small-only"><a href="/category/{{ item[0] | to_url }}/"><i class="fa fa-leaf"></i> {{ item[0] | capitalize }}</a></li>
             {% endfor %}
-          <li><a href="/about"><i class="fa fa-info-circle"></i> About us</a><li>
-          <li><a href="/contribute"><i class="fa fa-file-text"></i> Contribute</a></li>
-          <li><a href="/links"><i class="fa fa-star"></i> Links</a></li>
-          <li class="show-for-medium-up"><a><i class="fa fa-twitter"></i></a></li>
-          <li class="show-for-medium-up"><a><i class="fa fa-rss"></i></a></li>
+          <li><a href="/about"><i class="fa fa-info-circle fa-fw"></i><span> About us</span></a><li>
+          <li><a href="/contribute"><i class="fa fa-file-text fa-fw"></i><span> Contribute</span></a></li>
+          <li><a href="/links"><i class="fa fa-star fa-fw"></i><span> Links</span></a></li>
+          <li class="show-for-large-up"><a href="https://www.facebook.com/vegansforreasonandscience/info"><i class="fa fa-facebook fa-fw"></i><span> Facebook</span></a></li>
+          <li class="show-for-large-up"><a><i class="fa fa-twitter fa-fw"></i><span> Twitter</span></a></li>
+          <li><a href="/atom.xml"><i class="fa fa-rss fa-fw"></i><span> RSS feed</span></a></li>
       </ul>
 
     </section>
