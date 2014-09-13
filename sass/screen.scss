@@ -56,14 +56,14 @@ em, i {
 	.top-bar{
 
 		.main-navigation li a {
-			line-height: 1.5em;
+			line-height: 1em;
 		}
 
 		.main-navigation li span {
 			width: 0;
 			overflow: hidden;
 			display: inline-block;
-			height: 1em;
+			height: 2em;
 			text-align: center;
 			transition:width 0.2s ease-in-out;
 			-webkit-transition:width .2s ease-in-out;

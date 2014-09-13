@@ -42,6 +42,11 @@
 			    	display: none;
 			    	font-size: 5em;
 			    	margin-right: 0.15em;
+			    	transition:transform .30s ease-in-out;
+					-webkit-transition-delay: 500ms;
+				    -moz-transition-delay: 500ms;
+				    -o-transition-delay: 500ms;
+				    transition-delay: 500ms;
 			    }
 
 			    &.tagline {
@@ -79,6 +84,18 @@
 			    		display: inline-block;
 				    }
 				}
+			}
+		}
+	}
+
+	@media #{$large-up} { 
+
+		&:hover {
+			.icon {
+				/*transform: rotateY(180deg);
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				transition-delay: 0ms;*/
 			}
 		}
 	}
