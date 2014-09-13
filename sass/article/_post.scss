@@ -169,6 +169,17 @@ article.post {
 			table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
 			table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
 		}
+
+		.fa-ul {
+			
+			li {
+				margin-bottom: 0.5em;
+			}
+
+			.fa-li {
+				top: 0.36em;
+			}
+		}
 	}
 
 	.author-bio {
