@@ -55,15 +55,26 @@ em, i {
 
 	.top-bar{
 
+		.main-navigation li a {
+			line-height: 1.5em;
+		}
+
 		.main-navigation li span {
-			display: none;
-			opacity: 0;
+			width: 0;
+			overflow: hidden;
+			display: inline-block;
+			height: 1em;
+			text-align: center;
+			transition:width 0.2s ease-in-out;
+			-webkit-transition:width .2s ease-in-out;
+			-moz-transition: width 0.2s ease-in-out;
+			white-space: nowrap;
 		}
 
 		.main-navigation li:hover span {
-			display: inline;
-			opacity: 1;				
-			transition: opacity 0.3s, visibility 0.3s;
+			overflow: visible;
+			width : 100px;
+			
 		}
 	}
 }

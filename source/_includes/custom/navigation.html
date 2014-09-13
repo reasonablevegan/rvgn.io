@@ -6,7 +6,7 @@
     <ul class="title-area">
         <li class="name">
             <div class="main-identity">
-                <a href="{{ root_url }}/"><span class="icon icon-push icon-logo-small"></span> <span class="branding"><span>R</span>vgn</span></a>
+                <a href="{{ root_url }}/"><span class="icon icon-push icon-logo-small"></span> <span class="branding"><span class="uppercase">R</span><span class="hidden">e</span><span class="hidden">a</span><span class="hidden letter-s">s</span><span class="hidden">o</span><span class="hidden">n</span><span class="hidden">a</span><span class="hidden">b</span><span class="hidden letter-l">l</span><span class="hidden">e</span><span class="hidden letter-space"></span><strong>v<span class="hidden">e</span>g<span class="hidden">a</span>n</span></strong></a>
             </div>
         </li>
        <li class="toggle-topbar menu"><a href="#"><span>Menu <i class="fa fa-navicon"></i></span></a></li>
@@ -19,7 +19,7 @@
             {% for item in site.categories %}
           <li class="show-for-small-only"><a href="/category/{{ item[0] | to_url }}/"><i class="fa fa-leaf"></i> {{ item[0] | capitalize }}</a></li>
             {% endfor %}
-          <li><a href="/about"><i class="fa fa-info-circle fa-fw"></i><span> About us</span></a><li>
+          <li><a href="/about"><i class="fa fa-info-circle fa-fw"></i><span> About us</span></a></li>
           <li><a href="/contribute"><i class="fa fa-file-text fa-fw"></i><span> Contribute</span></a></li>
           <li><a href="/links"><i class="fa fa-star fa-fw"></i><span> Links</span></a></li>
           <li class="show-for-large-up"><a href="https://www.facebook.com/vegansforreasonandscience/info"><i class="fa fa-facebook fa-fw"></i><span> Facebook</span></a></li>

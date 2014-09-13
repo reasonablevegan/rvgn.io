@@ -8,12 +8,63 @@
 	    padding: 0 15px;
 	}
 
+	strong {
+		font-weight: normal;
+	}
+
 	span.branding {
 		font-size: 20px;
+		font-weight: lighter;
 
 		span {
-			font-size: 15px;
-			font-weight: bold;
+
+			&.uppercase {
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			&.hidden {
+				width: 0;
+				overflow: hidden;
+				display: inline-block;
+				transition:width .20s ease-in-out;
+				-webkit-transition:width .20s ease-in-out;
+				-moz-transition: width .20s ease-in-out;
+				line-height: 0.7em;
+			}
+		}
+	}
+
+	@media #{$large-up} {
+		&:hover {
+
+			strong span {
+				font-weight: normal !important;
+			}
+
+			span.branding {
+
+				span {
+					font-weight: lighter;
+				}
+
+				span.hidden {
+					overflow: visible;
+					width : 10px;
+
+					&.letter-l {
+						width: 5px;
+					}
+
+					&.letter-s {
+						width: 8px;
+					}
+
+					&.letter-space {
+						width: 5px;
+					}
+				}
+			}
 		}
 	}
 }
