@@ -79,6 +79,10 @@ footer#main-footer {
 			p {
 				margin-bottom: 0.25em;
 			}
+
+			@media #{$medium-only} {
+				padding-bottom: 2em !important;
+			}
 		}
 
 		.menu-container {
@@ -132,7 +136,7 @@ footer#main-footer {
 
 				p {
 					font-weight: lighter;
-					line-height: 1.2em;
+					line-height: 1.4em;
 					padding: 0.5em 1em;
 					font-size: 0.9em;
 

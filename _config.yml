@@ -103,9 +103,45 @@ facebook_like: true
 # ----------------------- #
 
 links:
+  - name: "The Abolitionist"
+    desc: "An online magazine promoting abolitionism and reason within animal rights."
+    link: "http://theabolitionist.info"
+
   - name: "Skeptical Vegan"
-    desc: "Skeptical analyses of vegan and animal rights issues"
-    link: "http://skepticalvegan.com/"
+    desc: "a blog featuring detailed skeptical analysis of topics pertinent to veganism and explores the intersections between science, animal rights, and social justice."
+    link: "http://skepticalvegan.com"
+
+  - name: "The Vegan RD"
+    desc: "Ginny Messina’s blog takes an evidence-based approach to vegan nutrition."
+    link: "http://theveganrd.com"
+
+  - name: "Counting Animals"
+    desc: "An amazing resource for statistical enquiry into animal use."
+    link: "http://countinganimals.com"
+
+  - name: "The Vegan Option"
+    desc: "A radio show and blog featuring stories, science, and analysis from vegan perspectives"
+    link: "http://theveganoption.org"            
+
+  - name: "Be Vegan Anywhere"
+    desc: "Dedicated to normalizing veganism and making it accessible to people from all walks of life and in as many places on the globe as possible."
+    link: "http://bevegananywhere.com"
+
+  - name: "Pythagorean Crank"
+    desc: "Offers a critical perspective on the vegan movement, exploring and illuminating issues surrounding veganism and the use of animals."
+    link: "http://pythagoreancrank.com"
+
+  - name: "Science-Based Medicine"
+    desc: "Dedicated to evaluating medical treatments and products of interest to the public in a scientific light, and promoting the highest standards and traditions of science in health care."
+    link: "http://sciencebasedmedicine.org"
+
+  - name: "Logical Veganism"
+    desc: "A Resource for the Logic of Veganism"
+    link: "http://logicalveganism.blogspot.co.uk"
+
+  - name: "Effective Altruism"
+    desc: "Promotes an evidence based approach to ‘doing good’ in the world and answering the question: of all the possible ways to make a difference, which will make the most difference?"
+    link: "http://effective-altruism.com"    
 
 # ----------------------- #
 #  Prose.io Settings      #

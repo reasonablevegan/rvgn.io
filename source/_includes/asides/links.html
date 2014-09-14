@@ -10,8 +10,8 @@
 </section>
 {% elsif links_mode == "footer" %}
 <ul>
-	{% for link in site.links limit: 10 %}
-		<li><a href="{{link.link}}" target="blank"><i class="fa fa-chevron-circle-right"></i> {{link.name}}</a></li>
+	{% for link in site.links limit: 9 %}
+		<li><a href="{{link.link}}" target="blank">{{link.name}}</a></li>
 	{%endfor%}
 </ul>
 {% endif %}

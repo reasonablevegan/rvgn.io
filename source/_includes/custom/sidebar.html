@@ -8,32 +8,34 @@
 		<a href="" class="button small expand">More about us <i class="fa fa-angle-double-right"></i></a>
 	</section>
 
-	{% if page.seealso %}
-		<section class="light-panel futher-reading">
-			<h5>Further reading</h5>
+	{% unless page.nosidebar == true %}
+		{% if page.seealso %}
+			<section class="light-panel futher-reading">
+				<h5>Further reading</h5>
 
-			<ul class="side-nav">
-			{% for link in page.seealso %}
-				<li><a href="{{link.link}}" target="blank"><i class="fa fa-chevron-circle-right"></i> {{link.name}}</a>{{link.description}}</li>
-			{%endfor%}
-			</ul>
-		</section>
-	{% endif %}
+				<ul class="side-nav">
+				{% for link in page.seealso %}
+					<li><a href="{{link.link}}" target="blank"><i class="fa fa-chevron-circle-right"></i> {{link.name}}</a>{{link.description}}</li>
+				{%endfor%}
+				</ul>
+			</section>
+		{% endif %}
 
-	{% if page.related %}
-		<section class="light-panel related-articles">
-			<h5>Related articles</h5>
+		{% if page.related %}
+			<section class="light-panel related-articles">
+				<h5>Related articles</h5>
 
-			<ul class="side-nav">
-			{% for link in page.related %}
-				<li><a href="{{link.link}}" target="blank"><i class="fa fa-leaf"></i> {{link.name}}</a></li>
-			{%endfor%}
-			</ul>
-		</section>
-	{% endif %}
+				<ul class="side-nav">
+				{% for link in page.related %}
+					<li><a href="{{link.link}}" target="blank"><i class="fa fa-leaf"></i> {{link.name}}</a></li>
+				{%endfor%}
+				</ul>
+			</section>
+		{% endif %}
 
-	{%unless (page.seealso and page.related %}
-		{% assign links_mode = "sidebar" %}
-		{% include asides/links.html %}
+		{%unless (page.seealso and page.related %}
+			{% assign links_mode = "sidebar" %}
+			{% include asides/links.html %}
+		{%endunless%}
 	{%endunless%}
 </aside>

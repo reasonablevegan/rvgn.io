@@ -1,0 +1,29 @@
+---
+title: "Links"
+comments: false
+sharing: true
+footer: true
+body_id: "links"
+layout: default
+nosidebar: true
+---
+<h1>Links</h2>
+
+<div class="row">
+	{% for link in site.links %}
+		{% assign mod = forloop.index0 | modulo:2 %}
+
+		<div class="column small-12 medium-6 link-capsule">
+			<a href="{{link.link}}" target="_blank">
+				<h2>{{link.name}}</h2>
+				<h3>{{link.link}} <i class="fa fa-external-link"></i></h3>
+				<p>{{link.desc}}</p>
+			</a>
+		</div>
+
+		{% if mod == 1 %}
+		</div>
+		<div class="row">
+		{%endif%}
+	{% endfor %}
+</div>

@@ -1,0 +1,35 @@
+body#links {
+
+	.link-capsule {
+
+		h2 {
+			font-size: 1.8em;
+		}
+
+		h3 {
+			font-size: 1.3em;
+
+			@include label(
+			    // This options sets label padding
+			    $padding:7px 16px 9px,
+			    // This option sets label text-size
+			    $text-size:13px,
+			    // This option sets label background-color
+			    $bg: rgba(black, 0.35),
+			    // This option sets the radius of the label
+			    $radius:4px
+			  );
+
+			margin-top: 0px;
+			margin-bottom: 0.5em;
+
+			i {
+				font-size: 0.85em;
+			}
+		}
+
+		p {
+			color: #333 !important;
+		}
+	}
+}
