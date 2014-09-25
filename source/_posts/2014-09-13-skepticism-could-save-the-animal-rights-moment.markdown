@@ -3,7 +3,6 @@ layout: post
 title: "Skepticism could save the animal rights moment, but will it? I’m sceptical."
 date: 2014-09-13 10:53:28 +0100
 comments: true
-comments: true
 categories: 
   - philosophy
   - analysis
@@ -43,7 +42,7 @@ Francione (and the many grassroots groups he influences through his outreach) te
 >You love one another. You eat another. That makes no sense. Go Vegan. You know that’s the right thing to do.[*](https://twitter.com/garylfrancione/status/444602055525548032 "From Francione's twitter account. 10:32 PM - 14 Mar 2014")
 <div></div>
 >There is no distinction between meat and other animal foods. All involve suffering. All involve death. All, involve exploitation. All involve injustice.
->If you believe that animals matter morally, you don't consume *any* animal foods.[*](https://www.facebook.com/abolitionistapproach/posts/844267208926368 "From Francion's Facebook account. 1 September at 02:53")
+>If you believe that animals matter morally, you don't consume *any* animal foods.[*](https://www.facebook.com/abolitionistapproach/posts/844267208926368 "From Francione's Facebook account. 1 September at 02:53")
  
 At the base of Francione’s philosophy, even after rejecting welfarism on rational grounds, is a solid adherence to dogmatic and fixed principles which seem inflexible to approaching genuine animal suffering: hence the almost demand-like posts rather than any significant thought provocation. Francione doesn’t admit that if welfarism works it would be worth doing as, in his opinion, veganism is a rejection of violence, and promoting smaller amounts of violence is still violence. This is where Francione’s approach, like many others in the animal rights movement, is at odds with reality. If welfarism does work, it should not be opposed, as animal rights is not about dogmatic principles it is about the interests of others. We shouldn’t oppose interests in order to stick to principles.
  

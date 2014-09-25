@@ -1,7 +1,7 @@
 ---
 layout: cartoon
 title: "What about free range eggs?"
-date: 2014-08-25 12:00:03 +0100
+date: 2014-08-09 16:21:41 +0100
 comments: true
 categories: 
   - cartoons

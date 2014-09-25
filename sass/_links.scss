@@ -23,6 +23,12 @@ body#links {
 			margin-top: 0px;
 			margin-bottom: 0.5em;
 
+			display: none;
+
+			@media #{$medium-up} {
+				display: block;
+			}
+
 			i {
 				font-size: 0.85em;
 			}

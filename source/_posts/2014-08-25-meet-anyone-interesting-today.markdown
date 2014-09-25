@@ -8,6 +8,7 @@ categories:
 author: Rebecca Fox
 image: /media/cartoon-1.jpg
 cartoon: /media/cartoons/meet-anyone-interesting-today.jpg
+published: false
 ---
 When writing the article [why are vegans so self righteous?](/ "FIXME!") I was particularly interested in the way  we confirm and perpetuate stereotypes. One of the mechanisms the human mind has for this is confirmation bias[*](http://en.wikipedia.org/wiki/Confirmation_bias "Wikipedia article on confirmation bias") –
  people remember occurrences that confirm their preconceived stereotypes, such as ‘the self-righteous vegan’. <!--more-->
