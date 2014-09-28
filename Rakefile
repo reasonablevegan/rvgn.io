@@ -9,6 +9,7 @@ require "html_compressor"
 ssh_user       = "paul@yttrium"
 ssh_port       = "22"
 document_root  = "/mnt/sites/rvgn"
+preview_root   = "/mnt/sites/rvgn-preview"
 rsync_delete   = false
 rsync_args     = "-e 'ssh -i "+ENV['HOME']+"/.ssh/id_rsa-yttrium'" 
 deploy_default = "rsync"
@@ -62,6 +63,14 @@ task :generate do
   system "jekyll build"
 end
 
+desc "Generate jekyll site with drafts"
+task :generate_drafts do
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  puts "## Generating Site with Jekyll"
+  system "compass compile --css-dir #{source_dir}/stylesheets"
+  system "jekyll build --drafts"
+end
+
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -84,6 +93,23 @@ task :preview do
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
   jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch")
+  compassPid = Process.spawn("compass watch")
+  rackupPid = Process.spawn("rackup --port #{server_port}")
+
+  trap("INT") {
+    [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+
+  [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
+end
+
+desc "preview the site in a web browser including drafts"
+task :preview_drafts do
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
+  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
+  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch --drafts")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
@@ -232,6 +258,16 @@ task :deploy do
   Rake::Task["#{deploy_default}"].execute
 end
 
+desc "Default deploy task with drafts"
+task :deploy_drafts do
+
+  Rake::Task[:minify_js].execute
+  Rake::Task[:minify_html].execute
+
+  Rake::Task[:copydot].invoke(source_dir, public_dir)
+  Rake::Task["#{deploy_default}" + "_drafts"].execute
+end
+
 desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
 end
@@ -251,6 +287,16 @@ task :rsync do
   end
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
+end
+
+desc "Deploy website via rsync with draft"
+task :rsync_drafts do
+  exclude = ""
+  if File.exists?('./rsync-exclude')
+    exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
+  end
+  puts "## Deploying website via Rsync"
+  ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{preview_root}")
 end
 
 desc "deploy public directory to github pages"
