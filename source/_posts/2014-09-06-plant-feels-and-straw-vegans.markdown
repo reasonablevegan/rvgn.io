@@ -7,6 +7,7 @@ categories:
   - science
   - analysis
   - opinion
+  - repost
 author: James Funston
 image: /media/plant.jpg
 ---

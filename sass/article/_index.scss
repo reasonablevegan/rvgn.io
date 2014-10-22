@@ -54,4 +54,12 @@ article.index {
 	p {
 		text-align: justify;
 	}
+
+    blockquote {
+        p {
+            color: #333 !important;
+            font-weight: lighter !important;
+            font-style: italic;
+        }
+    }
 }
