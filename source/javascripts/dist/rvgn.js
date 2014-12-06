@@ -68,10 +68,16 @@ $(document).on("ready",function(){
         el.attr("href","#footnote-"+idx);
         el.html("[" + idx + "]");
 
+        var content = "<p>"+footnote.title+"</p><p>";
+
+        if (footnote.href != "none") {
+            content += "<a href='"+footnote.href+"' target='_blank'><i class='fa fa-link'></i> " + footnote.href + "</a></p>" 
+        }
+
         el.tooltipster({
             position: "bottom",
             theme:    "tooltipster-shadow",
-            content:  $("<p>"+footnote.title+"</p><p><a href='"+footnote.href+"' target='_blank'><i class='fa fa-link'></i> " + footnote.href + "</a></p>"),
+            content:  $(content),
             interactive: true
         });
 
@@ -84,7 +90,11 @@ $(document).on("ready",function(){
         var article_footer = $('article.post footer');
 
         for (var i = 0; i < footnotes.length; i++) {
-            footnotes_el.append("<li id='footnote-"+footnotes[i].idx+"'><a href='#"+footnotes[i].id+"'><i class='fa fa-caret-up'></i></a> " + footnotes[i].title + ". <a href='"+footnotes[i].href+"'>"+footnotes[i].href+"</a></li>");
+            footnotes_el.append("<li id='footnote-"+footnotes[i].idx+"'><a href='#"+footnotes[i].id+"'><i class='fa fa-caret-up'></i></a> " + footnotes[i].title + ".");
+            
+            if (footnotes[i].href != "none"){
+                 footnotes_el.append(" <a href='"+footnotes[i].href+"'>"+footnotes[i].href+"</a></li>");
+            }
         }
 
         // Make sure to expand all referenced when a footnote

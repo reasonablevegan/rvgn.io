@@ -5,7 +5,7 @@
 
 	<section class="disclaimer">
 		{% include about_us.html %}	
-		<a href="" class="button small expand">More about us <i class="fa fa-angle-double-right"></i></a>
+		<a href="/about" class="button small expand">More about us <i class="fa fa-angle-double-right"></i></a>
 	</section>
 
 	{% unless page.nosidebar == true %}
@@ -33,7 +33,7 @@
 			</section>
 		{% endif %}
 
-		{%unless (page.seealso and page.related %}
+		{%unless (page.seealso or page.related %}
 			{% assign links_mode = "sidebar" %}
 			{% include asides/links.html %}
 		{%endunless%}

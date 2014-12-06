@@ -46,3 +46,4 @@ This is why we need rational arguments, and moreover a promotion of rationality 
  
 We can’t oversimplify if we want progress, we have to be using the best reason possible. Had we failed to do this in astro-physics, our knowledge of space would be determined solely by what we see from Earth. Our failure to do it in ethics could mean that we wrongly doom animals to a place as our products, working in terrible conditions, for many more centuries than were necessary.
 
+
