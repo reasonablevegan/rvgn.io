@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flight From the Body: A Psychoanalysis of Veganism"
-date: 2014-12-14 18:00:00 +0100
+date: 2014-12-08 11:45:37 +0000
 comments: true
 categories: 
   - philosophy

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Religion and Vegan Advocacy"
-date: 2014-12-21 18:00:00 +0100
+date: 2014-12-20 08:59:38 +0000
 comments: true
 categories: 
   - repost
