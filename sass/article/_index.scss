@@ -60,6 +60,12 @@ article.index {
             color: #333 !important;
             font-weight: lighter !important;
             font-style: italic;
+            text-align: left;
+            font-size: 0.8em;
+        }
+        
+        a {
+            display: none !important;
         }
     }
 }
