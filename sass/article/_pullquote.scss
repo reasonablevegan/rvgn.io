@@ -1,0 +1,88 @@
+
+.pullquote {
+    width: 40%;
+    position: relative;
+    margin: 0 1.5rem 1.5rem 0;
+    float: left;
+    font-size: 1.3em;
+    line-height: 1.5;
+    border: none !important;
+    color: $primary-color;
+    font-style: italic;
+    text-align: center;
+
+    br { 
+        display: none;
+    }
+
+    &.right {
+        margin-left: 2rem;
+        margin-right: 0rem;
+        float: right;
+    }
+    
+    &:before { 
+        content: "“";
+        font-family: Georgia;
+        position: absolute;
+        color: $primary-color;
+        font-size: 4em;
+        left: -1em;
+    }
+}
+
+.pullquote:before { 
+    top: -1.5rem;
+    left: -1.1rem;
+}
+.pullquote:after { 
+    content: "”";
+    position: absolute;
+    font-family: Georgia;
+    bottom: -3.5rem;
+    right: -0.5rem;
+    color: $primary-color;
+    font-size: 4em;
+}
+
+@media #{$medium-only} {
+
+    .pullquote { 
+        float: none;
+        width: 100%;
+        padding-left: 3em;
+        padding-right: 3em;
+        margin-top: 0em !important;
+        margin-bottom: 1.2em !important;
+
+        &:before, &:after { 
+            display: inline;
+            position: relative;
+            font-size: 1.5rem;
+            line-height: 1em;
+            left: inherit;
+            top: inherit;
+            bottom: inherit;
+        }
+    }
+}
+
+@media #{$small-only} {
+
+    .pullquote:before, .pullquote:after { 
+        display: inline;
+        position: relative;
+        font-size: 1.5rem;
+        line-height: 1em;
+        left: inherit;
+        top: inherit;
+        bottom: inherit;
+    }
+
+    .pullquote { 
+        float: none;
+        width: 100%;
+        margin-top: 0em !important;
+        margin-bottom: 1.2em !important;
+    }
+}

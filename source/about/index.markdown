@@ -9,7 +9,7 @@ nosidebar: true
 ---
 #About us
 
-The primary aim of Reasonable Vegan, as an organisation, is to develop a community of vegans who embrace the scientific method and empiricism. for our purposes, *reasonable* means 'adhering to rules of logic and following evidence', and in the vernacular of most English-speaking places, it's also used to mean sensible, fair and open minded. We hope we can live up to both definitions.
+The primary aim of Reasonable Vegan, as an organisation, is to develop a community of vegans who embrace the scientific method and empiricism. For our purposes, *reasonable* means 'adhering to rules of logic and following evidence', and in the vernacular of most English-speaking places, it's also used to mean sensible, fair and open minded. We hope we can live up to both definitions.
 
 How are we going to do that? Well, start small and grow big. Our first objective is to create a magazine-style blog featuring articles of interest to vegans, with a rational perspective. That's what you're looking at now. We expect articles to range from discussing (and analysing) the prevalence of woo in the vegan community, scientific solutions to the problems of animal agriculture, tactics and theories of effective activism, to the philosophy underlying veganism.
  
